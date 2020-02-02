@@ -24,14 +24,14 @@
                                     <form class="form-horizontal" method="POST" action="{{ route('login') }}" novalidate>
                                         @csrf
                                         <fieldset class="form-group position-relative has-icon-left">
-                                            <input type="text" class="form-control input-lg @error('username') is-invalid @enderror" id="username" name="username"
-                                                placeholder="Your User Name" tabindex="1" required
+                                            <input type="email" class="form-control input-lg @error('email') is-invalid @enderror" id="email" name="email"
+                                                placeholder="Your email" tabindex="1" required
                                                 data-validation-required-message="Please enter your user name.">
                                             <div class="form-control-position">
                                                 <i class="ft-user"></i>
                                             </div>
                                             <div class="help-block font-small-3">
-                                                @error('username')
+                                                @error('email')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
